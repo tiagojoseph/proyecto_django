@@ -6,7 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Landing Page - Start Bootstrap Theme</title>
+        <title>
+            {% block title_head %}
+             tiago 
+            {% endblock title_head %}
+
+        </title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -20,18 +25,23 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <a class="btn btn-primary" href="#signup">Sign Up</a>
+                <a class="navbar-brand" href= {% url "inicio" %}>inicio</a>
+                <a class="navbar-brand" href= {% url "primer_template" %}>primer template</a>
+                <a class="navbar-brand" href= {% url "segundo_template" %}>segundo template</a>
+                {% comment %}<a class="btn btn-primary" href="#signup">Sign Up</a>{% endcomment %}
             </div>
         </nav>
         <!-- Masthead-->
+        {% block header %}
         <header class="masthead">
             <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5"> soy la pantalla de inicio</h1>
+                            <h1 class="mb-5"> 
+                                {% block h1_header %} pantalla de inicio  {% endblock h1_header %}
+                            </h1>
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -45,6 +55,10 @@
                 </div>
             </div>
         </header>
+        {% endblock header %}
+        <main>
+            {% block main %}  {% endblock main %}
+        </main>
         <footer class="footer bg-light">
             <div class="container">
                 <div class="row">
