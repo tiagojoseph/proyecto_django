@@ -1,11 +1,11 @@
-{% extends "inicio/index.html"%}
+{% extends "index.html"%}
 {% load static %}
 {%block h1_header%} segundo template {%endblock h1_header%}
 {% block main%}    
 <h2> 
     {{fecha_actual}}
 </h2>
-<p>listado</p>
+<p>listado</p> 
 <ul>
     {% for num in numeros%}
     {% if num > 5%}
