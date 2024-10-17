@@ -383,7 +383,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: auto ;
+  -webkit-appearance: button;
 }
 button:not(:disabled),
 [type=button]:not(:disabled),
@@ -441,7 +441,7 @@ legend + * {
 
 [type=search] {
   outline-offset: -2px;
-  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
 }
 
 /* rtl:raw:
