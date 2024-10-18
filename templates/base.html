@@ -24,10 +24,10 @@
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
-            <div class="container">
+            <div class="container">           
                 <a class="navbar-brand" href= {% url "inicio" %} >inicio</a>
-                <a class="navbar-brand" href= {% url "primer_template" %}>primer template</a>
-                <a class="navbar-brand" href= {% url "segundo_template" %}>segundo template</a>
+                <a class="navbar-brand" href= {% url 'primer_template' %}>primer template</a>
+                <a class="navbar-brand" href= {% url "segundo_template" %} >segundo template</a>
                 {% comment %}<a class="btn btn-primary" href="#signup">Sign Up</a>{% endcomment %}
             </div>
         </nav>
